@@ -13,7 +13,7 @@ class Enemy(pygame.sprite.Sprite):
             self.surf.fill((255,0,0))
             self.rect = self.surf.get_rect(center = (x, y))
             self.counter = 0
-            self.firerate = random.uniform(30, 100)
+            self.firerate = random.uniform(60, 120)
         def shoot(self):
             if (self.counter > self.firerate):
                 coords = list(self.rect.center)

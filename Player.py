@@ -15,7 +15,7 @@ class Player(pygame.sprite.Sprite):
             self.vel = g.vec(0,0)
             self.acc = g.vec(0,0)
             self.counter = 0
-            self.firerate = 30
+            self.firerate = 20
             self.name = ''
 
         def shoot(self):

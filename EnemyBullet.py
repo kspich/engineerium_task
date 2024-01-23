@@ -14,5 +14,5 @@ class EnemyBullet(pygame.sprite.Sprite):
             if (coords[1] > g.HEIGHT): 
                 self.kill()
                 return
-            coords[1] += 10
+            coords[1] += 7
             self.rect = self.surf.get_rect(center = (coords[0], coords[1]))

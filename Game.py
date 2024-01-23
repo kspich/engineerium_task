@@ -2,7 +2,6 @@ import pygame
 from pygame.locals import *
 import sys
 import InputBox
-import sqlite3
 
 from Player import Player
 from Enemy import Enemy
@@ -112,7 +111,8 @@ class Game:
                     scoresflag = False
                     scores = self.highscores.getScores()
                 blitMultiline(
-                    self.display_surface, f'You won! {self.score} points gained.'\
+                    # тот самый топ 5 игроков
+                    self.display_surface, f'You won! {self.score} points gained.\n'\
                     'Press ENTER to start everything over\n\n'\
                     f'Top 5 players: \n\n{scores}', 
                     (20, 20), font, (255, 255, 255)

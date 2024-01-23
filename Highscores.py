@@ -17,7 +17,9 @@ class Highscores():
 
         def getScores(self):
             res = ''
+            i = 1
             for row in self.cur.execute("SELECT name, score FROM players ORDER BY score DESC LIMIT 5"):
-                res += row[0] + ' ' + str(row[1]) + '\n'
+                res += str(i) + '. ' + row[0] + ' ' + str(row[1]) + '\n'
+                i +=1
             print(f'Results for select statement:\n{res}')
             return res
