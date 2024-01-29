@@ -112,13 +112,20 @@ class Game:
                     scores = self.highscores.getScores()
                 blitMultiline(
                     # тот самый топ 5 игроков
-                    self.display_surface, f'You won! {self.score} points gained.\n'\
+                    self.display_surface, 
+                    f'You won! {self.score} points gained.\n'\
                     'Press ENTER to start everything over\n\n'\
                     f'Top 5 players: \n\n{scores}', 
                     (20, 20), font, (255, 255, 255)
                 )
             elif self.LOSE:
-                blitMultiline(self.display_surface, 'You lost :( !\nPress ENTER to start everything over', (20, 20), font, (255, 255, 255))
+                blitMultiline(
+                    self.display_surface,
+                    f'You lost :( ! {self.score} points gained.\n'\
+                    'Press ENTER to start everything over\n\n'\
+                    f'Top 5 players: \n\n{scores}',
+                    (20, 20), font, (255, 255, 255)
+                )
             else:
                 self.P1.move()
                 self.P1.counter += 1
