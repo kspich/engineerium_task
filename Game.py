@@ -119,6 +119,9 @@ class Game:
                     (20, 20), font, (255, 255, 255)
                 )
             elif self.LOSE:
+                if scoresflag: 
+                    scoresflag = False
+                    scores = self.highscores.getScores()
                 blitMultiline(
                     self.display_surface,
                     f'You lost :( ! {self.score} points gained.\n'\
